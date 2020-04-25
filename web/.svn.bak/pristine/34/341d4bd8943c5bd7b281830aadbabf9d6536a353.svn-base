@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+
+function printArray(element, index, array)
+{
+	$("#secretOutput").append("[" + index + "]" + " = " + element + "<br />");
+}
+

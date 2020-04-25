@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin: 0; padding: 0;
+}
+
+html, body, table * {
+	font-family: serif;
+	
+}
+
+table.result
+{
+	border: 1px solid #000000;
+	border-radius: 6px;
+	font-size: 12px;
+	min-width: 600px;
+	margin: 5px;
+}
+
+table.result tr:nth-child(odd)
+{
+	background-color: #eeeeee;
+}
+
+table.result tr td:first-child
+{
+	width: 75%;
+}
+
+table.result tr:nth-child(even)
+{
+	background-color: #ddddff;
+}
+
+span.hebrew
+{
+	font-weight: bold;
+	font-size: 110%;
+}
+
+div#secretOutput
+{
+	border: 1px solid #000000;
+	min-width: 200px;
+	min-height: 200px;
+	max-width: 90%;
+	max-height: 10%;
+	border-radius: 8px;
+	background-color: #eeeeee;
+}
+
+div.noteBox
+{
+	margin: 5px;
+	float: left;
+	padding: 2px;
+	border: 1px solid #000000;
+	background: #dedede;
+	border-radius: 4px;
+	
+	font-size: 130%;
+}
+
+span.qlmChar {
+	font-size: 120%;
+}
+
+span.qlmChar:hover {
+	border: 2px solid #444444;
+	padding: 2px;
+}

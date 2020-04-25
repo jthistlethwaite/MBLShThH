@@ -1,0 +1,22 @@
+<?php 
+require_once 'display.php';
+echo $docHead;
+?>
+<script src="libs/alpha.js" type="text/javascript"></script>
+
+<div id="secretOutput"></div>
+
+
+<script>
+/*
+	HebChars.forEach(printArray);
+	Signs.forEach(printArray);
+*/
+
+	$("#secretOutput").append("Testing: " + Planets[0]["char"]);
+	
+</script>
+
+<?php 
+echo $docFoot;
+?>

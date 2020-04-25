@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin: 0; padding: 0;
+}
+
+table.result
+{
+	border: 1px solid #000000;
+	border-radius: 6px;
+}
+
+div#secretOutput
+{
+	border: 1px solid #000000;
+	min-width: 200px;
+	min-height: 200px;
+	max-width: 90%;
+	max-height: 10%;
+	border-radius: 8px;
+	background-color: #eeeeee;
+}

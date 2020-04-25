@@ -1,0 +1,63 @@
+<?php
+
+$config = array(
+		'host' => 'localhost',
+		'user' => 'mullhouse',
+		'pass' => '#er67bg#',
+		'db' => 'mblshthh',
+		'charset' => 'utf8'
+);
+
+class mbshdb extends mysqli {
+	public function __construct($host, $user, $pass, $db) {
+		parent::__construct($host, $user, $pass, $db);
+
+		if (mysqli_connect_error()) {
+			die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
+		}
+	}
+} 
+$mbshdb = new mbshdb($config['host'], $config['user'], $config['pass'], $config['db']);
+$mbshdb->set_charset($config['charset']);
+
+require_once 'display.php';
+
+
+if (isset($_GET['a'])) {
+	$action = $_GET['a'];
+} elseif (isset($_POST['a'])) {
+	$action = $_POST['a'];
+} else {
+	$action = 'default';
+}
+
+/* Action Handler
+ * This is where we decide what to do
+ */
+
+switch ($action) {
+
+	case 'lookupNum':
+		$query = "SELECT * FROM liber500 WHERE gematriaValue = 66";
+		$ret = $mbshdb->query($query);
+
+		echo $docHead;
+		
+		echo "<table class=\"result\">".
+				"<tr><td colspan=\"2\"><strong class=\""
+		while ( ($row = $ret->fetch_assoc()) ) {
+			echo "<tr><td>${row['gematriaMeaning']}</td><td>${row['gematriaSource']}</td></tr>";
+		}
+		echo "</table>";
+		
+		echo $docFoot;
+		
+		break;
+	
+	default:
+		echo "Hello there";
+		break;
+}
+
+$mbshdb->close();
+?>

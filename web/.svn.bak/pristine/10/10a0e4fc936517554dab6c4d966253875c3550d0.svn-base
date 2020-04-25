@@ -1,0 +1,13 @@
+<?php
+
+$config = array(
+  'host' => 'localhost',
+  'user' => 'mullhouse',
+  'pass' => '#er67bg#',
+  'db' => 'mblshthh'
+);
+
+
+
+
+?>
